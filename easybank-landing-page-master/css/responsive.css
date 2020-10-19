@@ -1,0 +1,177 @@
+@media screen and (max-width:1421px){
+    .intro-inner{
+        width: 1111px;
+        right: 0;
+        /* overflow: hidden; */
+    }
+
+    .intro-right{
+        position: relative;
+    }
+
+    .intro-left-text{
+        left: 0;
+    }
+}
+
+@media screen and (max-width:1124px){
+   nav{
+       width: 900px;
+   }
+  /* //////////intro/////////// */
+   .intro-inner{
+       width: 900px;
+   }
+
+   .intro-bg img{
+       right: -300px;
+   }
+   .intro-bg{
+       width: 450px;
+   }
+
+   .intro-inner{
+       grid-template-columns: 450px auto;
+   }
+
+   .intro-right{
+       background-position: -20px -270px;
+   }
+/* ////////////services/////////////// */
+
+   .services-inner{
+       width: 900px;
+   }
+
+   .services-icons{
+    width: 900px;
+    grid-template-columns: 220px 220px 220px 220px ;
+   }
+
+   .services-icons-inner p{
+       width: 180px;
+   }
+   
+   /* /////////////////articles//////////// */
+
+   .articles-inner{
+       width: 900px;
+   }
+
+   .articles-news{
+       width: 900px;
+   }
+
+   /* ////////footer////////////// */
+   
+   .footer-inner{
+       width: 900px;
+   }
+}
+
+
+@media screen and (max-width:924px){
+    nav{
+        width: 700px;
+    }
+   /* //////////intro/////////// */
+    .intro-inner{
+        width: 700px;
+        
+    }
+ 
+    .intro-bg img{
+        top: -30px;
+        right: -100px;
+        width: 500px;
+    }
+ 
+    .intro-inner{
+        grid-template-columns: 250px auto;
+    }
+ 
+    .intro-right{
+        background-position: -20px -270px;
+    }
+
+    .intro-left-text{
+        width: 350px;
+    }
+    .intro-left-text h1{
+        font-size: 42px;
+    }
+    .intro-left-text h4{
+        font-size: 15px;
+        width: 300px;
+    }
+
+ /* ////////////services/////////////// */
+ 
+    .services-inner{
+        width: 700px;
+    }
+ 
+    .services-icons{
+     width: 700px;
+     grid-template-columns: 170px 170px 170px 170px ;
+    }
+ 
+    .services-icons-inner h3{
+        font-size: 20px;
+    }
+    
+    .services-icons-inner p{
+        width: 150px;
+        font-size: 14px;
+    }
+    
+    /* /////////////////articles//////////// */
+ 
+    .articles-inner{
+        width: 700px;
+    }
+ 
+    .articles-news{
+        width: 700px;
+        grid-template-columns: 150px 150px 150px 150px;
+    }
+
+    
+    .news-text p{
+        width: 150px;
+    }
+    .news-text h1{
+        width: 150px;
+    }
+    .news-text h6{
+        width: 150px;
+    }
+ 
+    /* ////////footer////////////// */
+    
+    .footer-inner{
+        width: 700px;
+        grid-template-columns: 150px 200px 150px auto;
+    }
+    .footer-inner-content2 a{
+        line-height: 25px;
+    }
+    .footer-inner-content4 p{
+        right: -30px;
+    }
+    
+    .footer-logo{
+        top: 50px;
+    }
+
+}
+
+/* ///////MOBILE VERSION////////////////// */ 
+    /* //////////////////// */
+        /* ////////// */
+          /* /// */
+
+/* 
+     NO MOBILE VERSION 
+        NO MORE GRID
+         IT SUCKS!!!!!!!!!!!!!!!!! */

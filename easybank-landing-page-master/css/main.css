@@ -1,0 +1,482 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    outline: none;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+header{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+nav{
+    width: 1111px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.toggle-btn{
+    background: none;
+    outline: none;
+    border:none;
+    display: none;
+}
+
+nav ul li{
+    list-style: none;
+    float: left;
+    padding: 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: hsl(233, 8%, 62%);
+    font-size: 15px;
+    transition: ease-in-out .4s;
+    display: block;
+}
+
+nav ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    background:linear-gradient(90deg, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    bottom: 5px;
+    transition: ease-in-out .4s;
+}
+
+nav ul li a:hover{
+    color:hsl(233, 26%, 24%);
+}
+
+nav ul li a:hover::after{
+    width: 50px;
+}
+
+button:hover{
+    opacity: 60%;
+}
+button{
+    transition: ease-in-out .3s;
+}
+
+
+.nav-btn{
+    width: 165px;
+    height: 45px;
+    outline: none;
+    background: linear-gradient(90deg,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    border: none;
+    border-radius: 50px;
+    color: hsl(220, 16%, 96%);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.intro{
+    width: 100%;
+    height: 650px;
+    position: relative;
+
+}
+
+.intro-inner{
+    width: 1400px;
+    height: 650px;
+    position: relative;
+    right: -10px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 650px auto;
+
+}
+
+.intro-right{
+    background-image: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: -70px -270px;
+
+}
+
+.intro-bg{
+    width: 650px;
+    height: 780px;
+    overflow:hidden;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.intro-bg img{
+    position: absolute;
+    top: -125px;
+}
+
+.intro-left{
+    position: relative;
+}
+
+.intro-left-text{
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    left: 130px;
+    top: 160px;
+}
+
+.intro-left-text h1{
+    color: hsl(233, 26%, 24%);
+    font-size: 55px;
+    font-weight: 400;
+    
+}
+
+.intro-left-text h4{
+    color: hsl(233, 8%, 62%);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    margin-top: 30px;
+}
+
+.intro-left-text button{
+    width: 155px;
+    height: 45px;
+    outline: none;
+    background: linear-gradient(90deg,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    border: none;
+    border-radius: 50px;
+    color: hsl(220, 16%, 96%);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+
+
+.services{
+    width: 100%;
+    height: 620px;
+    position: relative;
+    background-color: hsl(220, 16%, 96%);
+}
+
+.services-inner{
+    width: 1111px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+}
+
+.services-text{
+    width: 620px;
+}
+
+.services-text h1{
+    color: hsl(233, 26%, 24%);
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.services-text h4{
+    color: hsl(233, 8%, 62%);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 25px
+}
+
+.services-icons{
+    width: 1111px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 277px 277px 277px 277px; 
+}
+
+
+.services-icons-inner h3{
+    color: hsl(233, 26%, 24%);
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 27px;
+}
+
+.services-icons-inner p{
+    color: hsl(233, 8%, 62%);
+    font-size: 16.5px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 27px;
+    width: 260px;
+}
+
+.services-icons-inner::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(192, 70%, 51%),hsl(234, 20%, 38%));
+    position: relative;
+    top: -50px;
+    transition: ease-in-out .5s;
+}
+
+.services-icons-inner:hover::before{
+    width: 90%;
+}
+
+.articles{
+    width: 100%;
+    height: 570px;
+    position: relative;
+    background-color:hsl(0, 0%, 98%);
+}
+
+.articles-inner{
+    width: 1111px;
+    height: 570px;
+    position: relative;
+    margin: auto;
+}
+
+.articles-news{
+    width: 1111px;
+    height: 370px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+    position: absolute;
+    bottom: 110px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.articles-news-inner{
+    background: white;
+}
+
+.articles-inner h2{
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+    font-size: 41px;
+    margin-top: 90px;
+}
+
+.news-pic1, .news-pic2, .news-pic3, .news-pic4{
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.news-pic1{
+    background-image: url(/images/image-currency.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.news-pic2{
+    background-image: url(/images/image-restaurant.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.news-pic3{
+    background-image: url(/images/image-plane.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.news-pic4{
+    background-image: url(/images/image-confetti.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.articles-news-inner:hover > .news-pic1{
+    transform: scale(1);
+}
+
+.articles-news-inner:hover > .news-pic2{
+    transform: scale(1);
+    
+}
+
+.articles-news-inner:hover > .news-pic3{
+    transform: scale(1);
+}
+
+.articles-news-inner:hover > .news-pic4{
+    transform: scale(1);
+}
+
+
+.articles-news-inner:hover > .news-text h1{
+    color: hsl(169, 87%, 44%);
+}
+
+.articles-news-inner::after{
+    content: "";
+    display: block;
+    position: relative;
+    left: 35%;
+    transform: translate(-35%);
+    bottom: -40px;
+    width: 0;
+    height: 2px;
+    background-color: hsl(169, 57%, 39%);
+    transition:ease-in-out .4s;
+    opacity: 0;
+}
+
+.articles-news-inner:hover:after{
+    width: unset;
+    opacity: 100%;
+}
+
+.news-text{
+    width: 200px;
+    margin: auto;
+}
+
+.news-text h6{
+    color: hsl(233, 8%, 62%);
+    margin-top: 30px;
+}
+
+.news-text h1{
+    color: hsl(233, 26%, 24%);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+
+.news-text p{
+    color: hsl(233, 8%, 62%);
+    font-size: 13px;
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 180px;
+    background-color: hsl(233, 26%, 24%);
+}
+.footer-inner{
+    width: 1111px;
+    height: 180px;
+    margin: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px 200px 250px auto;
+    background-color: hsl(233, 26%, 24%);
+    
+}
+
+
+
+.footer-logo{
+    position: relative;
+    top: 35px;
+}
+.footer-icons{
+    position: absolute;
+    bottom: 40px;
+
+}
+.footer-icons img{
+    transition: ease-in-out .3s;
+}
+
+.footer-icons img:hover{
+    transform: scale(1.5);
+}
+
+.footer-icons a{
+    margin-left: 10px;
+}
+
+.footer-inner-content2{
+    position: relative;
+}
+
+.footer-inner-content2 ul{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.footer-inner-content2 li{
+    list-style: none;
+}
+.footer-inner-content2 a{
+    text-decoration: none;
+    color: hsl(220, 16%, 96%);
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: 500;
+    transition: ease-in-out .4s;
+}
+
+.footer-inner-content2 a:hover{
+    color: hsl(169, 87%, 44%);
+}
+
+.footer-inner-content4 button{
+    width: 160px;
+    height: 45px;
+    outline: none;
+    background: linear-gradient(90deg,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    border: none;
+    border-radius: 50px;
+    color: hsl(220, 16%, 96%);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 35px;
+    position: absolute;
+    right: 0;
+}
+
+.footer-inner-content4 p{
+    color: hsl(233, 8%, 62%);
+    font-weight: 300;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    top: 110px;
+}
+
