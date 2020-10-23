@@ -1,0 +1,673 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+body.overflow{
+    overflow: hidden;   /*<<<for responsive nav overflow lock */
+}
+
+
+.loader-bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    transition: ease-in .6s;
+}
+
+header.active{
+    background-color: darkcyan;
+    position: fixed;
+    z-index: 9999;
+}
+
+nav ul li a.active{
+    color: white;
+}
+
+.logo1{
+    display: none;
+    pointer-events: none;
+}
+.logo{
+    pointer-events: none;
+}
+
+nav{
+    width: 1111px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.resp-nav{
+   width: 100%;
+   height: 100%;
+   top: 80px;
+   position: fixed;
+   background: linear-gradient(hsl(233, 26%, 24%), darkcyan);
+   z-index: 999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.resp-nav ul li{
+    list-style: none;
+    padding: 10px;
+}
+
+.resp-nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    font-weight: 700;
+}
+
+
+.nav-toggle{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    color: hsl(233, 26%, 24%);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+    display: none;
+}
+
+.nav-toggle::before{
+    content: none;
+}
+
+nav ul li{
+    list-style: none;
+    float: left;
+    padding: 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+    color: hsl(233, 8%, 62%);
+    font-size: 15px;
+    transition: ease-in-out .4s;
+    display: block;
+}
+
+nav ul li a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background:linear-gradient(90deg, hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    bottom: 5px;
+    transition: ease-in-out .4s;
+}
+
+nav ul li a:hover{
+    color:hsl(233, 26%, 24%);
+}
+
+nav ul li a:hover::after{
+    width: 50px;
+}
+
+.nav-btn{
+    width: 165px;
+    height: 45px;
+    outline: none;
+    background: linear-gradient(90deg,hsl(192, 70%, 51%), hsl(136, 65%, 51%));
+    border: none;
+    border-radius: 50px;
+    color: hsl(220, 16%, 96%);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+/* /////////////////////////// */
+.request-popup{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 99999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(160, 169, 169, 0.542);
+    visibility: hidden;
+}
+
+
+.popup-email{
+    width: 450px;
+    height: 220px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.email-field{
+    width: 350px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 20px;
+    outline: none;
+    border: darkcyan solid thin;
+    background: transparent;
+    border-radius: 50px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 18px;
+    transition: ease-in-out .4s;
+}
+
+.email-field.error{
+    border: solid rgba(255, 99, 71, 0.7) thin;
+    transition: ease-in-out .4s;
+}
+
+.popup-email input::placeholder{
+    color: rgba(60, 58, 58, 0.337);
+}
+.popup-email input:focus{
+    border: rgb(11, 197, 197) solid thin;
+}
+
+.send-email{
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(90deg,hsl(192, 70%, 51%), hsla(136, 65%, 51%, 0.57));
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.exit-email{
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+    border: none;
+    background: rgba(255, 99, 71, 0.659);
+    border-radius: 50px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    transition: ease-in-out .4s;
+}
+
+.exit-email:hover{
+    background: tomato;
+}
+.exit-email::before{
+    content: none;
+}
+
+.popup-btns{
+    margin-top: 20px;
+}
+
+.success{
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    color: rgb(97, 196, 133);
+}
+/* //////////////////////////////////////// */
+
+.intro{
+    width: 100%;
+    height: 650px;
+    position: relative;
+}
+
+.intro-inner{
+    width: 1111px;
+    height: 650px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: -200px;
+}
+
+.intro-left-text{
+    width: 350px;
+}
+.intro-left-text h1{
+    color:hsl(233, 26%, 24%);
+    font-size: 45px;
+}
+.intro-left-text p{
+    color: hsla(233, 26%, 24%, 0.555);
+    font-size: 18px;
+    margin-top: 20px;
+}
+.intro-left-text button{
+    width: 160px;
+    height: 45px;
+    outline: none;
+    background: linear-gradient(90deg,hsl(192, 70%, 51%), hsl(136, 65%, 51%));
+    border: none;
+    border-radius: 50px;
+    color: hsl(220, 16%, 96%);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+body::-webkit-scrollbar{
+    width: 7px;
+}
+body::-webkit-scrollbar-track{
+    background:hsla(159, 86%, 35%, 0.981);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: darkcyan;
+}
+
+button:hover::before{
+    width: 100%;
+    opacity: 100%;
+}
+
+button{
+    z-index: 2;
+    position: relative;
+}
+
+button::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    opacity: 0%;
+    border-radius: 50px;
+    background: hsl(192, 70%, 51%);
+    transition: ease-in-out .3s;
+    z-index: -1;
+}
+
+.intro-right{
+    width: 700px;
+    height: 100%;
+    background-image: url(../images/image-mockups.png);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: center;
+}
+
+
+.services{
+    width: 100%;
+    height: 620px;
+    position: relative;
+    background-color: hsl(220, 16%, 96%);
+}
+
+.services-inner{
+    width: 1111px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    overflow: hidden;
+}
+
+.services-text{
+    width: 620px;
+}
+
+.services-text h1{
+    color: hsl(233, 26%, 24%);
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.services-text h4{
+    color: hsl(233, 8%, 62%);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 25px;
+}
+
+.services-icons{
+    width: 1111px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    right: -550px; /* for animation */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.services-icons-inner h3{
+    color: hsl(233, 26%, 24%);
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 27px;
+}
+
+
+.services-icons-inner p{
+    color: hsl(233, 8%, 62%);
+    font-size: 16.5px;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 27px;
+    width: 260px;
+}
+
+.services-icons-inner::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(177, 70%, 51%),hsl(157, 37%, 39%));
+    position: relative;
+    top: -50px;
+    transition: ease-in-out .5s;
+}
+
+.services-icons-inner:hover::before{
+    width: 90%;
+}
+
+.articles{
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-color:hsl(0, 0%, 98%);
+}
+
+.articles-inner{
+    width: 1111px;
+    height: 700px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.articles-news{
+    width: 1111px;
+    height: 420px;
+    position: absolute;
+    bottom:120px;
+    left: -550px; /* for animation */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.scrollupbtn{
+    background: transparent;
+    border: none;
+    outline: none;
+    position: fixed;
+    right: 2%;
+    top: 75%;
+    cursor: pointer;
+    display: none;                       /*<<<< scroll btn  */
+}
+.scrollup i{
+    font-size: 40px;
+    color: hsl(211, 94%, 36%);
+    transition:ease-in-out .4s;
+}
+
+.scrollupbtn i:hover{
+    color: tomato;
+}
+
+.scrollupbtn::before{
+    content: none;
+}
+
+.articles-news-inner{
+    background: white;
+}
+
+.articles-inner h2{
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+    font-size: 41px;
+    margin-top: 70px;
+}
+
+.news-pic1, .news-pic2, .news-pic3, .news-pic4{
+    width: 250px;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(/images/image-plane.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+
+.news-pic1{
+    background-image: url(../images/image-currency.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.news-pic2{
+    background-image: url(../images/image-restaurant.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.news-pic3{
+    background-image: url(../images/image-plane.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.news-pic4{
+    background-image: url(../images/image-confetti.jpg);
+    transition: ease-in-out .3s;
+    transform: scale(.9);
+}
+
+.articles-news-inner:hover > .news-pic1{
+    transform: scale(1);
+}
+
+.articles-news-inner:hover > .news-pic2{
+    transform: scale(1);
+    
+}
+
+.articles-news-inner:hover > .news-pic3{
+    transform: scale(1);
+}
+
+.articles-news-inner:hover > .news-pic4{
+    transform: scale(1);
+}
+
+
+.articles-news-inner:hover > .news-text h1{
+    color: hsl(169, 87%, 44%);
+}
+
+.articles-news-inner::after{
+    content: "";
+    display: block;
+    position: relative;
+    left: 35%;
+    transform: translate(-35%);
+    bottom: -40px;
+    width: 0;
+    height: 2px;
+    background-color: hsl(169, 57%, 39%);
+    transition:ease-in-out .4s;
+    opacity: 0;
+}
+
+.articles-news-inner:hover:after{
+    width: unset;
+    opacity: 100%;
+}
+
+.news-text{
+    width: 200px;
+    margin: auto;
+}
+
+.news-text h6{
+    color: hsl(233, 8%, 62%);
+    margin-top: 30px;
+}
+
+.news-text h1{
+    color: hsl(233, 26%, 24%);
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+
+.news-text p{
+    color: hsl(233, 8%, 62%);
+    font-size: 13px;
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: hsl(233, 26%, 24%);
+}
+.footer-inner{
+    width: 1111px;
+    height: 150px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    background-color: hsl(233, 26%, 24%);
+}
+
+
+.footer-inner-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-left-icons img{
+    padding: 2px;
+    transition: ease-in-out .4s;
+}
+
+.footer-left-icons img:hover{
+    transform: scale(1.7);
+}
+
+.footer-center{
+    width: 250px;
+    margin-right: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-center li{
+    list-style: none;
+    padding: 4px;
+}
+.footer-center a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: ease-in-out .4s;
+}
+
+.footer-center a:hover{
+    color:hsl(169, 57%, 39%);
+    text-decoration: underline;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+.footer-right button{
+    width: 165px;
+    height: 45px;
+    outline: none;
+    background: linear-gradient(90deg,hsl(192, 70%, 51%), hsl(136, 65%, 51%));
+    border: none;
+    border-radius: 50px;
+    color: hsl(220, 16%, 96%);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-right p{
+    color:hsl(216, 6%, 83%);
+    font-size: 15px;
+    pointer-events: none;
+    user-select: none;
+}

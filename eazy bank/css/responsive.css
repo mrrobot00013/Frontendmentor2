@@ -1,0 +1,375 @@
+@media screen and (max-width:1146px){
+    nav{
+        width: 900px;
+    }
+    .intro-inner{
+        width: 900px;
+    }
+    .intro-right{
+        width: 500px;
+    }
+    .services-inner{
+        width: 900px;
+    }
+    .services-icons{
+        width: 900px;
+    }
+    .services-icons-inner h3{
+        font-size: 20px;
+        
+    }
+    .services-icons-inner p{
+        width: 200px;
+    }
+
+    .articles-inner{
+        width: 900px;
+    }
+    .articles-news{
+        width: 900px;
+    }
+    .news-pic1, .news-pic2, .news-pic3, .news-pic4{
+        width: 220px;
+    }
+
+    .footer-inner{
+        width: 900px;
+    }
+    .footer-center{
+        margin-right: 0px
+    }
+}
+
+
+@media screen and (max-width:911px){
+    nav{
+        width: 750px;
+    }
+    .intro-inner{
+        width: 750px;
+    }
+    .intro-right{
+        width: 400px;
+        background-position: left;
+    }
+    .services-inner{
+        width: 750px;
+    }
+    .services-icons{
+        width: 750px;
+    }
+    .services-icons-inner h3{
+        font-size: 20px;
+        
+    }
+    .services-icons-inner p{
+        width: 150px;
+    }
+
+    .articles-inner{
+        width: 750px;
+    }
+    .articles-news{
+        width: 750px;
+    }
+    .news-pic1, .news-pic2, .news-pic3, .news-pic4{
+        width: 180px;
+    }
+    .news-text{
+        width: 150px;
+    }
+
+    .footer-inner{
+        width: 750px;
+    }
+    .footer-center{
+        margin-right: 0px
+    }
+}
+
+
+@media screen and (max-width:757px){
+    nav{
+        width: 450px;
+    }
+    nav ul, nav .nav-btn{
+        display: none;
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .intro{
+        height: 700px;
+    }
+    .intro-inner{
+        width: 450px;
+        flex-direction: column-reverse;
+    }
+    .intro-right{
+        width: 450px;
+        background-size: 300px;
+        background-position: center;
+    }
+    .intro-left-text{
+        width: 400px;
+        text-align: center;
+    }
+
+    .services{
+        height: 1300px;
+    }
+    .services-inner{
+        width: 450px;
+        height: 1200px;
+        top: unset;
+    }
+    .services-icons{
+        width: 450px;
+        flex-direction: column;
+        top: 150px;
+    }
+    .services-icons-inner p{
+        width: unset;
+    }
+    .services-icons-inner{
+        margin-top: 50px;
+    }
+    .services-icons-inner::before{
+        top: -30px;
+    }
+    .services-text{
+        margin-top: 30px;
+    }
+    .services-text h4{
+        margin-top: 15px;
+    }
+    .services-icons-inner h3{
+        font-size: 25px;
+        
+    }
+
+
+    .articles{
+        height: 2100px;
+    }
+    .articles-inner{
+        width: 450px;
+        height: 2100px;
+    }
+
+    .articles-news{
+        width: 450px;
+        height: 1900px;
+        top: 100px;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+    }
+    .articles-news-inner::after{
+        bottom: -15px;
+    }
+
+    .news-pic1, .news-pic2, .news-pic3, .news-pic4{
+        width: 450px;
+        height: 300px;
+    }
+    .news-text{
+        width: 450px;
+    }
+    .news-text h1{
+        font-size: 20px;
+    }
+    .news-text p{
+        font-size: 16px;
+    }
+    .articles-inner h2{
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    footer{
+        height: 300px;
+    }
+    .footer-inner{
+        width: 450px;
+        height: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-inner-left{
+        height: 100px;
+    }
+
+    .footer-center{
+        margin-right: unset;
+    }
+
+    .footer-right{
+        align-items: center;
+        height: 100px;
+    }
+
+}
+
+@media screen and (max-width:473px){
+    nav{
+        width: 350px;
+    }
+  
+    .intro{
+        height: 700px;
+    }
+    .intro-inner{
+        width: 350px;
+    }
+    .intro-right{
+        width: 350px;
+    }
+    .intro-left-text{
+        width: 350px;
+        
+    }
+
+    .services-inner{
+        width: 350px;
+        height: 1300px;
+    }
+    .services-icons{
+        width: 350px;
+        top: 140px;
+    }
+ 
+    .services-text h1{
+        font-size: 30px;
+    }
+ 
+
+
+    .articles{
+        height: 2200px;
+    }
+    .articles-inner{
+        width: 350px;
+        height: 2200px;
+    }
+
+    .articles-news{
+        width: 350px;
+        height: 2000px;
+    }
+
+
+    .news-pic1, .news-pic2, .news-pic3, .news-pic4{
+        width: 350px;
+    }
+    .news-text{
+        width: 350px;
+    }
+
+ 
+    .footer-inner{
+        width: 350px;
+    }
+
+}
+
+@media screen and (max-width:350px){
+    nav{
+        width: 280px;
+    }
+ 
+    .intro{
+        height: 850px;
+    }
+    .intro-inner{
+        width: 280px;
+        height: 800px;
+
+    }
+    .intro-right{
+        width: 280px;
+    }
+    .intro-left-text{
+        width: 280px;
+    }
+
+    .services{
+        height: 1400px;
+    }
+    .services-inner{
+        width: 280px;
+        height: 1400px;
+    }
+    .services-icons{
+        width: 280px;
+        top: 150px;
+    }
+
+
+    .services-text h4{
+        font-size: 16px;
+    }
+    .services-text h1{
+        font-size: 25px;
+    }
+    .services-text h4{
+        margin-top: 15px;
+    }
+    .services-icons-inner h3{
+        font-size: 25px;
+        
+    }
+
+
+    .articles{
+        height: 2300px;
+    }
+    .articles-inner{
+        width: 280px;
+        height: 2300px;
+    }
+
+    .articles-news{
+        width: 280px;
+        height: 2100px;
+    }
+    .articles-news-inner::after{
+        bottom: -15px;
+    }
+
+    .news-pic1, .news-pic2, .news-pic3, .news-pic4{
+        width: 280px;
+    }
+    .news-text{
+        width: 280px;
+    }
+    .news-text h1{
+        font-size: 20px;
+    }
+    .news-text p{
+        font-size: 16px;
+    }
+    .articles-inner h2{
+        margin-top: 30px;
+    }
+
+    .footer-inner{
+        width: 280px;
+    }
+
+
+}
+
+
+
+/* resp only for popup */
+
+@media screen and (max-width:366px){
+    .popup-email{
+        width: 300px;
+    }
+    .email-field{
+        width: 250px;
+    }
+}
